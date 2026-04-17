@@ -30,7 +30,13 @@ jobs:
         run: ./tools/configure.sh build
 
       - name: Build
-        run: cmake --build build -j
+        run: |
+          cmake -S . -B build -G Ninja
+          cd build
+          ninja
+
+      - name: Static Analysis
+        run: ./tools/run_tidy.sh
 
       - name: Run public tests
         run: ctest --test-dir build --output-on-failure

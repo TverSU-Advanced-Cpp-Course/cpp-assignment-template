@@ -1,0 +1,11 @@
+Checks: >
+  bugprone-*,
+  modernize-*,
+  performance-*,
+  readability-*,
+  -readability-identifier-length,
+  -readability-magic-numbers,
+  -modernize-use-trailing-return-type
+HeaderFilterRegex: '.*solution/.*'
+FormatStyle: file
+WarningsAsErrors: ''

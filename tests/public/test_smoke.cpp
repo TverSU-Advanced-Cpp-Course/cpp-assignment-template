@@ -3,5 +3,5 @@
 #include "placeholder.hpp"
 
 TEST(SmokeTest, PlaceholderWorks) {
-    EXPECT_EQ(placeholder(), 42);
+    EXPECT_EQ(Placeholder(), 42);
 }

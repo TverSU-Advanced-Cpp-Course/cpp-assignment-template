@@ -1,5 +1,5 @@
-#include "placeholder.hpp"
+#include "placeholder.h"
 
-int placeholder() {
+int Placeholder() {
     return 42;
 }

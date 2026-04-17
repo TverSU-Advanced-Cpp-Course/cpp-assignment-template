@@ -22,6 +22,8 @@ if(NOT TARGET student_solution)
     message(FATAL_ERROR "solution/CMakeLists.txt must define target 'student_solution'")
 endif()
 
+target_compile_options(student_solution INTERFACE -Wall -Wextra -Wpedantic -Werror -O2)
+
 if(ENABLE_CLANG_TIDY)
     find_program(CLANG_TIDY_EXE NAMES clang-tidy)
     if(CLANG_TIDY_EXE)

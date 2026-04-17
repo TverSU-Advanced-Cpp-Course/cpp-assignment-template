@@ -14,7 +14,8 @@ if [ ! -f "$BUILD_DIR/compile_commands.json" ]; then
 fi
 
 mapfile -t files < <(find solution -type f \( \
-    -name '*.cpp' -o -name '*.cc' -o -name '*.cxx' \
+    -name '*.cpp' -o -name '*.cc' -o -name '*.cxx' -o \
+    -name '*.hpp' -o -name '*.h' \
 \) | sort)
 
 if [ ${#files[@]} -eq 0 ]; then
